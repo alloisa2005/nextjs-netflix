@@ -1,14 +1,21 @@
 import GithubSigninButton from "@/app/components/GithubSigninButton";
 import GoogleSigninButton from "@/app/components/GoogleSigninButton";
+import { authOptions } from "@/app/utils/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Github } from "lucide-react";
-import Image from "next/image";
+import { getServerSession } from "next-auth";
 import Link from "next/link";
-import React from "react";
-import GoogleIcon from '../../../public/google.svg'
+import { redirect } from "next/navigation";
+
 
 const SignUpPage = () => {
+
+  const session = await getServerSession(authOptions);
+
+  if(session) {
+    redirect('/')
+  }
+
   return (
     <div className="mt-24 rounded bg-black/80 py-10 px-6 md:mt-0 md:max-w-md md:px-14">
       <form>
