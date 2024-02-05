@@ -1,3 +1,5 @@
+import GithubSigninButton from "@/app/components/GithubSigninButton";
+import GoogleSigninButton from "@/app/components/GoogleSigninButton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github } from "lucide-react";
@@ -43,18 +45,8 @@ const LoginPage = () => {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button variant="outline" size="icon">
-          <Github className="w-5 h-5" />
-        </Button>
-
-        <Button variant="outline" size="icon">
-          <Image
-            src={GoogleIcon}
-            alt="Google Icon"
-            priority
-            className="w-6 h-6"
-          />
-        </Button>
+        <GithubSigninButton />
+        <GoogleSigninButton />
       </div>
     </div>
   );
