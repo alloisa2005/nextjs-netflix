@@ -9,7 +9,7 @@ import Logo from "../../public/netflix_logo.svg";
 import UserNav from "./UserNav";
 
 const links = [
-  { id: 1, name: "Home", href: "/" },
+  { id: 1, name: "Home", href: "/home" },
   { id: 2, name: "TV Shows", href: "/tv-shows" },
   { id: 3, name: "Movies", href: "/movies" },
   { id: 4, name: "Recently Added", href: "/recently-added"},
