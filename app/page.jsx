@@ -1,8 +1,6 @@
 import { getServerSession } from "next-auth";
-import Image from "next/image";
 import { redirect } from "next/navigation";
 import Navbar from "./components/Navbar";
-import SignOutButton from "./components/SignOutButton";
 import { authOptions } from "./utils/auth";
 
 export default async function Home() {  
@@ -11,9 +9,9 @@ export default async function Home() {
 
   if(!session) {
     return redirect('/login')
+  } else{
+    return redirect('/home')
   }
 
-  return (    
-      <Navbar />    
-  );
+  
 }

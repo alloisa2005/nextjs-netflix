@@ -13,7 +13,7 @@ const SignUpPage = () => {
   const session = await getServerSession(authOptions);
 
   if(session) {
-    redirect('/')
+    redirect('/home')
   }
 
   return (
